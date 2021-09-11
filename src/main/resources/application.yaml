@@ -6,7 +6,7 @@ logging:
           drugdataset: DEBUG
     root: ERROR
 server:
-  port: 8080
+  port: ${SECRET_SERVER_PORT:8080}
 spring:
   application:
     name: search
@@ -15,9 +15,9 @@ spring:
       base-path: /drugs
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    password:
-    url: jdbc:mysql://localhost:3305/sample_data
-    username:
+    password: ${SECRET_DB_PASSWORD:P@ssw0rd}
+    url: jdbc:mysql://${SECRET_DB_HOST:61.19.242.56}:${SECRET_DB_PORT:3305}/${SECRET_DB_SGM:sample_data}
+    username: ${SECRET_DB_USERNAME:root}
   jpa:
     show-sql: false
 thitiwas:
