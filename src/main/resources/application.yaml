@@ -1,0 +1,24 @@
+logging:
+  level:
+    com:
+      thitiwas:
+        drug:
+          drugdataset: DEBUG
+    root: ERROR
+server:
+  port: 8080
+spring:
+  application:
+    name: search
+  data:
+    rest:
+      base-path: /drugs
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    password:
+    url: jdbc:mysql://localhost:3305/sample_data
+    username:
+  jpa:
+    show-sql: false
+thitiwas:
+  profile: native
