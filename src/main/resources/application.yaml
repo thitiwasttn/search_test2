@@ -16,9 +16,9 @@ spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     password: ${SECRET_DB_PASSWORD:P@ssw0rd}
-    url: jdbc:mysql://${SECRET_DB_HOST:localhost}:${SECRET_DB_PORT:3305}/${SECRET_DB_SGM:sample_data}
-    username: ${SECRET_DB_USERNAME:root}
+    url: jdbc:mysql://${SECRET_DB_IP:10.30.1.10}:${SECRET_DB_PORT:3306}/${SECRET_DB_SGM:sample_data}
+    username: ${SECRET_DB_USERNAME:thitiwas}
   jpa:
-    show-sql: false
+    show-sql: true
 thitiwas:
   profile: native

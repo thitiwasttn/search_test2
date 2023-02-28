@@ -1,0 +1,13 @@
+docker build . -t search:0
+
+docker tag search:0 localhost:5000/search:0
+
+docker push localhost:5000/search:0
+
+docker stop search_test
+
+docker rm search_test
+
+docker image rm localhost:5000/search:0
+
+docker run --name search_test -p 9076:8080 -d -it localhost:5000/search:0
